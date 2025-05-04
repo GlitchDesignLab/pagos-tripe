@@ -30,8 +30,8 @@ app.post("/crear-sesion", async (req, res) => {
       ],
       mode: "payment",
       allow_promotion_codes: true,
-      success_url: "https://tusitio.com/success",
-      cancel_url: "https://tusitio.com/cancel",
+      success_url: "https://pagos-tripe-production.up.railway.app/",
+      cancel_url: "https://pagos-tripe-production.up.railway.app/",
     });
 
     res.json({ url: session.url });
