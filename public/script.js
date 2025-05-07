@@ -3,14 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Lista de zonas horarias de LATAM
     const latamTimezones = [
       // Argentina
-      "America/Argentina",
-      "America/Buenos_Aires",
-      "America/Salta",
-      "America/Cordoba",
-      "America/Jujuy",
-      "America/Mendoza",
-      "America/Rio_Gallegos",
-      "America/Ushuaia",
+      // "America/Argentina",
+      // "America/Buenos_Aires",
+      // "America/Salta",
+      // "America/Cordoba",
+      // "America/Jujuy",
+      // "America/Mendoza",
+      // "America/Rio_Gallegos",
+      // "America/Ushuaia",
 
       // Bolivia
       "America/La_Paz",
