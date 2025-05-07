@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const checkoutBtn = document.getElementById("checkout-btn");
 
     if (isLATAM(timezone)) {
-      checkoutBtn.href = "latamPayment/index.html";
+      checkoutBtn.href = "../latamPayment/public/index.html";
       console.log("LATAM");
     } else {
       checkoutBtn.addEventListener("click", async () => {
