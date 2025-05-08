@@ -1,3 +1,43 @@
+// DROPDOWN FUNCTIONS
+
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdowns = document.querySelectorAll(".dropdown");
+
+  dropdowns.forEach((dropdown) => {
+    const header = dropdown.querySelector(".dropdown-header");
+    const content = dropdown.querySelector(".dropdown-content");
+
+    header.addEventListener("click", () => {
+      // Cierra otros abiertos
+      dropdowns.forEach((d) => {
+        if (d !== dropdown) {
+          d.classList.remove("open");
+          const c = d.querySelector(".dropdown-content");
+          c.style.maxHeight = null;
+          c.style.paddingTop = "0";
+          c.style.paddingBottom = "0";
+        }
+      });
+
+      // Alterna el actual
+      dropdown.classList.toggle("open");
+
+      if (dropdown.classList.contains("open")) {
+        content.style.maxHeight = 200 + "px";
+        content.style.paddingTop = "1rem";
+        content.style.paddingBottom = "1rem";
+        content.style.transition = "all .5s ease-in-out";
+      } else {
+        content.style.maxHeight = null;
+        content.style.paddingTop = "0";
+        content.style.paddingBottom = "0";
+        content.style.transition = "all .5s ease-in-out";
+      }
+    });
+  });
+});
+// LOCATION READER
+
 document.addEventListener("DOMContentLoaded", () => {
   function isLATAM(timezone) {
     // Lista de zonas horarias de LATAM

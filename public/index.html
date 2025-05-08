@@ -4,15 +4,255 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pasarela con Stripe</title>
+  <!-- FONT - POPPINS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Landing Page template</title>
 </head>
 
 <body>
-  <h1>Comprar producto</h1>
-  <a href="" id="checkout-btn">Pagar</a>
+  <!-- Cambiar idioma -->
+  <div id="lang-selector">
+    <select id="language-switcher">
+      <option value="es">Español</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+
+  <header id="banner">
+
+    <div class="section_wrapper">
+      <h1 data-i18n="banner.title"></h1>
+      <p data-i18n="banner.subTitle" class="subtitle"></p>
+      <video src="./media/4496268-hd_1920_1080_25fps.mp4" controls autoplay muted loop playsinline
+        style="max-width: 100%; height: auto;">
+      </video>
+
+
+      <!-- modify this form HTML and place wherever you want your form -->
+      <form action="https://formspree.io/f/xdoybora" method="POST">
+        <div>
+          <label>
+            <input type="text" name="Name" placeholder="Name">
+          </label>
+          <label>
+            <input type="email" name="Email" placeholder="Email">
+          </label>
+        </div>
+
+        <!-- your other form fields go here -->
+        <button type="submit">Send</button>
+
+        <p data-i18n="banner.legalClousure"></p>
+      </form>
+
+      <!-- Trustpilot -->
+      <div class="trustpilot_content">
+
+        <div class="star_container">
+          <span>
+            ★
+          </span>
+          <span>
+            ★
+          </span>
+          <span>
+            ★
+          </span>
+          <span>
+            ★
+          </span>
+          <span>
+            ★
+          </span>
+        </div>
+        <div>
+          Trust pilot comment here
+        </div>
+        <div>
+          User name
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <!-- Benefits -->
+    <section id="benefits">
+
+      <div class="section_wrapper">
+        <p data-i18n="benefits.topText" class="subtitle">
+
+        </p>
+        <h2 data-i18n="benefits.title">
+
+        </h2>
+        <p data-i18n="benefits.description" class="subtitle">
+
+        </p>
+
+        <!-- Benefits cards -->
+        <div class="cards_container">
+          <div>
+            <i class="fa-solid fa-book-open"></i>
+            <p data-i18n="benefits.card1.description"></p>
+          </div>
+          <div>
+            <i class="fa-solid fa-box"></i>
+            <p data-i18n="benefits.card2.description"></p>
+          </div>
+          <div>
+            <i class="fa-solid fa-earth-americas"></i>
+            <p data-i18n="benefits.card2.description"></p>
+          </div>
+        </div>
+
+        <a href="" class="button" data-i18n="benefits.cta.description"></a>
+      </div>
+
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+
+      <div class="section_wrapper">
+        <h2 data-i18n="testimonials.title"></h2>
+        <p data-i18n="testimonials.description" class="subtitle"></p>
+
+        <!-- Testimonials cards -->
+        <div class="testimonials_cards_container">
+          <div class="testimonial_card">
+            <p data-i18n="testimonials.card1.description" class="testimonial_description">
+            </p>
+            <div>
+              <img src="./media/profile.png" alt="">
+              <p class="testimonial_name">John Doe</p>
+            </div>
+
+          </div>
+          <div class="testimonial_card">
+            <p data-i18n="testimonials.card2.description" class="testimonial_description">
+
+            </p>
+            <div>
+              <img src="./media/profile_2.png" alt="">
+              <p class="testimonial_name">John Doe</p>
+            </div>
+
+
+          </div>
+          <div class="testimonial_card">
+            <p data-i18n="testimonials.card3.description" class="testimonial_description">
+
+            </p>
+            <div>
+              <img src="./media/profile_3.png" alt="">
+              <p class="testimonial_name">John Doe</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Meeting CTA -->
+    <section id="meeting">
+      <div class="section_wrapper">
+        <h2 data-i18n="meeting.title">
+
+        </h2>
+        <p data-i18n="meeting.description" class="subtitle">
+
+        </p>
+        <a href="" class="button"><i class="fa-solid fa-calendar-days"></i> <span data-i18n="meeting.cta"></span></a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="section_wrapper">
+
+        <h2 data-i18n="faq.title">
+
+        </h2>
+        <p data-i18n="faq.description" class="subtitle">
+
+        </p>
+
+        <div class="dropdown">
+          <div class="dropdown-header">
+            <i class="fa-solid fa-question main_icon"></i>
+            <h3>¿Qué incluye este producto?</h3>
+            <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+          </div>
+          <div class="dropdown-content">
+            Este producto incluye acceso completo a todos los módulos, soporte personalizado y actualizaciones futuras
+            sin costo adicional.
+          </div>
+        </div>
+        <div class="dropdown">
+          <div class="dropdown-header">
+            <i class="fa-solid fa-question main_icon"></i>
+            <h3>¿Qué incluye este producto?</h3>
+            <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+          </div>
+          <div class="dropdown-content">
+            Este producto incluye acceso completo a todos los módulos, soporte personalizado y actualizaciones futuras
+            sin costo adicional.
+          </div>
+        </div>
+        <div class="dropdown">
+          <div class="dropdown-header">
+            <i class="fa-solid fa-question main_icon"></i>
+            <h3>¿Qué incluye este producto?</h3>
+            <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+          </div>
+          <div class="dropdown-content">
+            Este producto incluye acceso completo a todos los módulos, soporte personalizado y actualizaciones futuras
+            sin costo adicional.
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- Checkout CTA -->
+    <section id="checkout">
+      <div class="section_wrapper">
+        <h2 data-i18n="checkout.title">
+
+        </h2>
+        <p data-i18n="checkout.description">
+
+        </p>
+        <a href="" id="checkout-btn" class="button"><i class="fa-solid fa-cart-shopping"></i> <span
+            data-i18n="checkout.cta"></span></a>
+      </div>
+    </section>
+  </main>
+
+
+
+  <footer>
+
+  </footer>
 
   <!-- JS -->
   <script src="script.js"></script>
+
+  <!-- first - make translations available -->
+  <script src="len-change/i18n.js"></script>
+  <!-- then - read translations -->
+  <script src="len-change/main.js"></script>
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/a3cedbb514.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
